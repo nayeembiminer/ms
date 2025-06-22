@@ -1,0 +1,28 @@
+wget https://github.com/Oink70/ccminer-verus/archive/refs/tags/v3.8.3a-CPU.tar.gz
+
+tar -xf v3 press the tab 
+
+sudo apt update
+sudo apt install -y build-essential autoconf automake libtool pkg-config \
+libssl-dev libjansson-dev libcurl4-openssl-dev libz-dev
+
+
+
+make clean
+./autogen.sh
+./configure
+make
+
+
+
+adress id verus RBFUSYaKByrTeWbHh2P9VBL3XzpggmDVXp 
+
+
+
+./ccminer -a verus -o stratum+tcp://sg.vipor.net:5040 -u RBFUSYaKByrTeWbHh2P9VBL3XzpggmDVXp.demon1 -p x -t 8
+
+13.53.206.140
+
+
+
+taskset -c 0-3 nice -n -20 ./ccminer -a verus -o stratum+tcp://sg.vipor.net:5040 -u RBFUSYaKByrTeWbHh2P9VBL3XzpggmDVXp.demon1 -p c=VRSC -t 4
